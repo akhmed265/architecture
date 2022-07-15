@@ -1,0 +1,7 @@
+{
+  "workbench.colorTheme": "Visual Studio Dark",
+  "workbench.preferredDarkColorTheme": "Default Dark+",
+  "workbench.preferredHighContrastColorTheme": "Default Dark+",
+  "screencastMode.mouseIndicatorColor": "#FF0000",
+  "css.lint.hexColorLength": "warning"
+}

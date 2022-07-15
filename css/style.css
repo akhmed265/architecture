@@ -1,0 +1,86 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --gap: .5em;
+    --index: calc (1vw + 1vh);
+    --color-dark: #000
+}
+
+body {
+    overflow: hidden;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} 
+
+.header {
+    text-transform: uppercase;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    letter-spacing: 5px;
+    position: absolute;
+    font-weight: 500;
+    margin-top: 5px;
+    text-align: center;
+}
+
+.header__title {
+    font-size: 50px;
+}
+
+.header__loading {
+    display: block;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    margin-top: 10px;
+}
+
+.gallery {
+    width: 30vw;
+    column-width: 2em;
+    transform: scale(8.2);
+    gap: var(--gap);
+    will-change: transform;
+    transition: transform 1s cubic-bezier(.075, 1, .25, 1);
+    opacity: 1s;
+}
+
+.gallery__item {
+    margin-bottom: var(--gap);
+    transform: scale(1.001);
+    will-change: transform;
+    transition: .3s;
+}
+
+.gallery__item:hover {
+    transform: scale(1.03);
+}
+
+.gallery__item img {
+    width: 100%;
+    display: block;
+}
+
+.loaded .gallery {
+    opacity: 1;
+}
+
+.loaded .header__loading {
+    opacity: 0;
+}
+
+/* dark mode */
+
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #fff;
+    }
+
+    .header {
+        filter: invert(100%);
+    }
+}
